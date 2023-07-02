@@ -51,6 +51,7 @@ sudo -u $PLS_USER bash -c "exit"
 
 
 # get the staking deposit cli app and build it.
+cd ~
 git clone https://gitlab.com/pulsechaincom/staking-deposit-cli.git
 cd /home/$USER/staking-deposit-cli && pip3 install -r requirements.txt && sudo python3 setup.py install
 
