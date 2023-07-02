@@ -44,6 +44,7 @@ sudo apt-get install -y cmake
 sudo apt-get install -y clang
 sudo apt-get install -y wget
 sudo apt-get install -y jq
+sudo apt-get install -y openssh-server
 sudo apt-get install -y protobuf-compiler
 sudo snap install --classic go
 sudo -u $PLS_USER bash -c "cd \$HOME && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
