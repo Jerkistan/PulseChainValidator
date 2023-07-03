@@ -20,7 +20,7 @@ LIGHTHOUSE_REPO_NAME="lighthouse-pulse"
 LIGHTHOUSE_CHECKPOINT_URL="https://checkpoint.pulsechain.com"
 
 
-#####################################################################
+#####################################################################   
 
 
 # create a user for running the validator
@@ -192,7 +192,7 @@ sudo ufw allow $LIGHTHOUSE_PORT/udp
 sudo ufw allow $GETH_PORT/tcp
 sudo ufw allow $GETH_PORT/udp
 sudo ufw allow 22/tcp
-sudo ufw enable
+sudo ufw --force enable
 
 
 # start the services geth, beacon, and validator
