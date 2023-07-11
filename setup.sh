@@ -145,14 +145,15 @@ After=network.target
 Wants=network.target
 
 [Service]
-User=$USER
-Group=$USER
+User=node
+Group=node
 Type=simple
 Restart=always
 RestartSec=5
 ExecStart=/home/$USER/validator/lighthouse vc \
 --network pulsechain \
---suggested-fee-recipient=$FEE_RECIPIENT\
+--suggested-fee-recipient=$FEE_RECIPIENT \
+--metrics\
 
 [Install]
 WantedBy=multi-user.target
