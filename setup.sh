@@ -4,7 +4,7 @@ LIGHTHOUSE_CHAIN="pulsechain"
 
 GETH_REPO="https://gitlab.com/pulsechaincom/go-pulse.git"
 LIGHTHOUSE_REPO="https://gitlab.com/pulsechaincom/lighthouse-pulse.git"
-STAKING_DEPOSIT_CLI_REPO=""https://gitlab.com/pulsechaincom/staking-deposit-cli.git
+STAKING_DEPOSIT_CLI_REPO="https://gitlab.com/pulsechaincom/staking-deposit-cli.git"
 LIGHTHOUSE_CHECKPOINT_URL="https://checkpoint.pulsechain.com"
 
 
