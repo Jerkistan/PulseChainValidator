@@ -16,6 +16,8 @@ git clone https://github.com/Jerkistan/PulseChainValidator.git
 <br>
 cd PulseChainValidator
 <br>
+chmod +x setup.sh
+<br>
 ./setup.sh
 <br>
 
