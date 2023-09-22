@@ -12,6 +12,8 @@ After the script completes, Go-Pulse, Lighthouse-Beacon and Lighthouse-Validator
 INSTRUCTIONS:
 <br>
 <br>
+cd ~
+<br>
 git clone https://github.com/Jerkistan/PulseChainValidator.git
 <br>
 cd PulseChainValidator
