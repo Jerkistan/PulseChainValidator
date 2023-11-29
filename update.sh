@@ -16,7 +16,6 @@ git pull
 
 # build geth
 cd ~
-git clone $GETH_REPO
 cd go-pulse
 make
 cd ~
@@ -28,14 +27,14 @@ cd lighthouse-pulse
 source /home/$USER/.cargo/env && make
 cd ~
 
-systemctl stop geth lighthouse-beacon lighthouse-validator
+sudo systemctl stop geth lighthouse-beacon lighthouse-validator
 
 mv /home/$USER/validator/geth /home/$USER/validator/geth.backup
 mv /home/$USER/validator/lighthouse /home/$USER/validator/lighthouse.backup
 
-mv build/bin/geth /home/$USER/validator
-mv .cargo/bin/lighthouse /home/$USER/validator
+mv /go-pulse/build/bin/geth /home/$USER/validator/geth
+mv .cargo/bin/lighthouse /home/$USER/validator/lighthouse
 
-systemctl start geth lighthouse-beacon lighthouse-validator
+sudo systemctl start geth lighthouse-beacon lighthouse-validator
 
 echo "Update Complete.  Rebooting the machine is recommended"
