@@ -9,7 +9,7 @@ After the script completes, Go-Pulse, Lighthouse-Beacon and Lighthouse-Validator
 <br>
 <br>
 
-INSTRUCTIONS:
+VALIDATOR SETUP:
 <br>
 <br>
 cd ~
@@ -26,6 +26,7 @@ chmod +x setup.sh
 
 UPDATING GO-PULSE AND LIGHTHOUSE:
 <br>
+<br>
 cd ~
 <br>
 cd PulseChainValidator
@@ -37,6 +38,7 @@ chmod +x update.sh
 <br>
 
 PRUNING GO-PULSE:
+<br>
 <br>
 cd ~
 <br>
