@@ -24,7 +24,7 @@ chmod +x setup.sh
 <br>
 <br>
 
-UPDATING GO-PULSE AND LIGHTHOUSE:
+UPDATING THE CLIENTS:
 <br>
 <br>
 cd ~
