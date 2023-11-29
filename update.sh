@@ -32,7 +32,7 @@ sudo systemctl stop geth lighthouse-beacon lighthouse-validator
 mv /home/$USER/validator/geth /home/$USER/validator/geth.backup
 mv /home/$USER/validator/lighthouse /home/$USER/validator/lighthouse.backup
 
-mv /go-pulse/build/bin/geth /home/$USER/validator/geth
+mv go-pulse/build/bin/geth /home/$USER/validator/geth
 mv .cargo/bin/lighthouse /home/$USER/validator/lighthouse
 
 sudo systemctl start geth lighthouse-beacon lighthouse-validator
