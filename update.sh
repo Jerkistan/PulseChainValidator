@@ -5,8 +5,8 @@ LIGHTHOUSE_REPO="https://gitlab.com/pulsechaincom/lighthouse-pulse.git"
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
-rm -r -i /home/$USER/go-pulse
-rm -r -i /home/$USER/lighthouse-pulse
+rm -R -I /home/$USER/go-pulse
+rm -R -I /home/$USER/lighthouse-pulse
 
 
 # get geth and build it
@@ -25,6 +25,7 @@ source /home/$USER/.cargo/env && make
 cd ~
 
 systemctl stop geth lighthouse-beacon lighthouse-validator
+
 mv /home/$USER/validator/geth /home/$USER/validator/geth.backup
 mv /home/$USER/validator/lighthouse /home/$USER/validator/lighthouse.backup
 
