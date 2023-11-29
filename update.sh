@@ -1,15 +1,20 @@
-GETH_REPO="https://gitlab.com/pulsechaincom/go-pulse.git"
-LIGHTHOUSE_REPO="https://gitlab.com/pulsechaincom/lighthouse-pulse.git"
+#GETH_REPO="https://gitlab.com/pulsechaincom/go-pulse.git"
+#LIGHTHOUSE_REPO="https://gitlab.com/pulsechaincom/lighthouse-pulse.git"
 
 # update, upgrade
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
-rm -R -I /home/$USER/go-pulse
-rm -R -I /home/$USER/lighthouse-pulse
+cd ~
+cd /lighthouse-pulse
+git pull
+
+cd ~
+cd /go-pulse
+git pull
 
 
-# get geth and build it
+# build geth
 cd ~
 git clone $GETH_REPO
 cd go-pulse
@@ -17,9 +22,8 @@ make
 cd ~
 
 
-# get lighthouse and build it
+# build lighthouse
 cd ~
-git clone $LIGHTHOUSE_REPO
 cd lighthouse-pulse
 source /home/$USER/.cargo/env && make
 cd ~
