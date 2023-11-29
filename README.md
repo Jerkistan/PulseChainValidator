@@ -22,6 +22,30 @@ chmod +x setup.sh
 <br>
 ./setup.sh
 <br>
+<br>
 
+UPDATING GO-PULSE AND LIGHTHOUSE:
+<br>
+cd ~
+<br>
+cd PulseChainValidator
+<br>
+chmod +x update.sh
+<br>
+./update.sh
+<br>
+<br>
+
+PRUNING GO-PULSE:
+<br>
+cd ~
+<br>
+cd PulseChainValidator
+<br>
+chmod +x prune.sh
+<br>
+./prune.sh
+<br>
+<br>
 
 If you are feeling generous enough to thank me for my time, send me some PLS at <b>0x5eff71d47c9cc8e384f6e6fb72058e12fe1507a6</b> :)
