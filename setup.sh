@@ -26,7 +26,7 @@ sudo apt-get install -y protobuf-compiler
 #sudo apt-get install -y dotnet-sdk-7.0
 sudo snap install go --channel=1.22/stable --classic
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-update cargo
+
 
 
 # make the directories where the clients / data will live
@@ -64,6 +64,7 @@ mv build/bin/geth /home/$USER/validator
 cd ~
 git clone $LIGHTHOUSE_REPO
 cd lighthouse-pulse
+update cargo -y
 source /home/$USER/.cargo/env && make
 cd ~
 mv .cargo/bin/lighthouse /home/$USER/validator
