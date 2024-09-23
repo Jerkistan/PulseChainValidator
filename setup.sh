@@ -65,7 +65,7 @@ mv build/bin/geth /home/$USER/validator
 cd ~
 git clone $LIGHTHOUSE_REPO
 cd lighthouse-pulse
-update cargo
+cargo update
 source /home/$USER/.cargo/env && make
 cd ~
 mv .cargo/bin/lighthouse /home/$USER/validator
