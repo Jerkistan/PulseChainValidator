@@ -26,6 +26,7 @@ sudo apt-get install -y protobuf-compiler
 #sudo apt-get install -y dotnet-sdk-7.0
 sudo snap install go --channel=1.22/stable --classic
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+sudo apt install cargo -y
 
 
 
