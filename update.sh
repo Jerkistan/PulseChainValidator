@@ -24,6 +24,7 @@ cd ~
 # build lighthouse
 cd ~
 cd lighthouse-pulse
+cargo update
 source /home/$USER/.cargo/env && make
 cd ~
 
