@@ -33,9 +33,9 @@ sudo apt install cargo -y
 # make the directories where the clients / data will live
 cd ~
 mkdir validator
-cd /validator
+cd validator
 mkdir data
-cd /data
+cd data
 mkdir geth
 mkdir beacon
 
