@@ -28,6 +28,8 @@ sudo snap install go --channel=1.22/stable --classic
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 sudo apt install cargo -y
 
+sudo apt-get update -y
+sudo apt-get upgrade -y
 
 
 # make the directories where the clients / data will live
