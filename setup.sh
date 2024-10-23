@@ -2,6 +2,7 @@
 GETH_CHAIN="pulsechain"
 LIGHTHOUSE_CHAIN="pulsechain"
 
+
 GETH_REPO="https://gitlab.com/pulsechaincom/go-pulse.git"
 LIGHTHOUSE_REPO="https://gitlab.com/pulsechaincom/lighthouse-pulse.git"
 STAKING_DEPOSIT_CLI_REPO="https://gitlab.com/pulsechaincom/staking-deposit-cli.git"
