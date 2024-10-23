@@ -14,7 +14,6 @@ LIGHTHOUSE_CHECKPOINT_URL="https://checkpoint.pulsechain.com"
 
 
 # update, upgrade, and get required packages
-sudo apt-get update
 sudo apt-get install -y build-essential cmake clang curl git wget jq protobuf-compiler snapd openssh-server snap
 sudo snap install --classic go
 
