@@ -13,12 +13,11 @@ LIGHTHOUSE_CHECKPOINT_URL="https://checkpoint.pulsechain.com"
 
 
 # update, upgrade, and get required packages
-sudo apt-get update -y
-sudo apt-get upgrade -y
 sudo apt install -y python3-pip
 sudo apt-get install -y build-essential
 sudo apt-get install -y cmake
 sudo apt-get install -y clang
+sudo apt-get install wsl -y
 sudo apt-get install -y wget
 sudo apt-get install -y jq
 sudo apt-get install -y openssh-server
