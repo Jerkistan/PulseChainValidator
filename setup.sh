@@ -2,7 +2,6 @@
 GETH_CHAIN="pulsechain"
 LIGHTHOUSE_CHAIN="pulsechain"
 
-
 GETH_REPO="https://gitlab.com/pulsechaincom/go-pulse.git"
 LIGHTHOUSE_REPO="https://gitlab.com/pulsechaincom/lighthouse-pulse.git"
 STAKING_DEPOSIT_CLI_REPO="https://gitlab.com/pulsechaincom/staking-deposit-cli.git"
@@ -14,10 +13,21 @@ LIGHTHOUSE_CHECKPOINT_URL="https://checkpoint.pulsechain.com"
 
 
 # update, upgrade, and get required packages
-sudo apt-get install -y build-essential cmake clang curl git wget jq protobuf-compiler snapd openssh-server snap
-sudo snap install --classic go
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt install -y python3-pip
+sudo apt-get install -y build-essential
+sudo apt-get install -y cmake
+sudo apt-get install -y clang
+sudo apt-get install -y wget
+sudo apt-get install -y jq
+sudo apt-get install -y openssh-server
+sudo apt-get install -y protobuf-compiler
+#sudo apt-get install -y dotnet-sdk-7.0
+sudo snap install go --channel=1.22/stable --classic
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+sudo apt install cargo -y
 
-##sudo snap install rust -y
 
 # make the directories where the clients / data will live
 cd ~
@@ -54,6 +64,7 @@ mv build/bin/geth /home/$USER/validator
 cd ~
 git clone $LIGHTHOUSE_REPO
 cd lighthouse-pulse
+cargo update
 source /home/$USER/.cargo/env && make
 cd ~
 mv .cargo/bin/lighthouse /home/$USER/validator
