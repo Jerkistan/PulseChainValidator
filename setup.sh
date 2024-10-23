@@ -15,6 +15,7 @@ LIGHTHOUSE_CHECKPOINT_URL="https://checkpoint.pulsechain.com"
 # update, upgrade, and get required packages
 sudo apt-get update -y
 sudo apt-get upgrade -y
+sudo apt-get install -y python3-full
 sudo apt install -y python3-pip
 sudo apt-get install -y build-essential
 sudo apt-get install -y cmake
