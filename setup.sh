@@ -10,14 +10,6 @@ LIGHTHOUSE_CHECKPOINT_URL="https://checkpoint.pulsechain.com"
 
 #####################################################################   
 
-# make the directories where the clients / data will live
-cd ~
-mkdir validator
-cd validator
-mkdir data
-cd data
-mkdir geth
-mkdir beacon
 
 
 # update, upgrade, and get required packages
@@ -37,14 +29,15 @@ sudo snap install go --channel=1.22/stable --classic
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 sudo apt install cargo -y
 
-# get the staking deposit cli app and build it.
-cd ~
-git clone $STAKING_DEPOSIT_CLI_REPO
-cd /home/$USER/staking-deposit-cli && pip3 install -r requirements.txt && sudo python3 setup.py install
 
-# generate key/keystore files
-cd /home/$USER/staking-deposit-cli && ./deposit.sh --language=English new-mnemonic --num_validators=1 --mnemonic_language=English --chain=pulsechain --eth1_withdrawal_address=$FEE_RECIPIENT
-mv /home/$USER/staking-deposit-cli/validator_keys /home/$USER/validator
+# make the directories where the clients / data will live
+cd ~
+mkdir validator
+cd validator
+mkdir data
+cd data
+mkdir geth
+mkdir beacon
 
 
 
@@ -78,6 +71,15 @@ read -p "Enter the rewards address: " FEE_RECIPIENT
 read -p "Enter the public IP address: " SERVER_IP_ADDRESS
 read -p "Enter the Geth port number: " GETH_PORT
 read -p "Enter the Lighthouse port number: " LIGHTHOUSE_PORT
+
+# get the staking deposit cli app and build it.
+cd ~
+git clone $STAKING_DEPOSIT_CLI_REPO
+cd /home/$USER/staking-deposit-cli && pip3 install -r requirements.txt && sudo python3 setup.py install
+
+# generate key/keystore files
+cd /home/$USER/staking-deposit-cli && ./deposit.sh --language=English new-mnemonic --num_validators=1 --mnemonic_language=English --chain=pulsechain --eth1_withdrawal_address=$FEE_RECIPIENT
+mv /home/$USER/staking-deposit-cli/validator_keys /home/$USER/validator
 
 
 
