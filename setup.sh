@@ -171,7 +171,7 @@ cd validator
 ./lighthouse account validator import --directory /home/$USER/validator/validator_keys --network=pulsechain
 
 
-# firewall rules to allow go-pulse and lighthouse services.  these ports should also be enabled and forwarded on your router
+# firewall rules to allow go-pulse and lighthouse services.  these ports should also be enabled and forwarded on your router.  !! do not forward port 22 on your router unless you want to enable remote login from outside your network !!
 sudo ufw allow $LIGHTHOUSE_PORT/tcp
 sudo ufw allow $LIGHTHOUSE_PORT/udp
 sudo ufw allow $GETH_PORT/tcp
