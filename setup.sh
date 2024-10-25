@@ -10,6 +10,14 @@ LIGHTHOUSE_CHECKPOINT_URL="https://checkpoint.pulsechain.com"
 
 #####################################################################   
 
+# get the staking deposit cli app and build it.
+cd ~
+git clone $STAKING_DEPOSIT_CLI_REPO
+cd /home/$USER/staking-deposit-cli && pip3 install -r requirements.txt && sudo python3 setup.py install
+
+# generate key/keystore files
+cd /home/$USER/staking-deposit-cli && ./deposit.sh --language=English new-mnemonic --num_validators=1 --mnemonic_language=English --chain=pulsechain --eth1_withdrawal_address=$FEE_RECIPIENT
+mv /home/$USER/staking-deposit-cli/validator_keys /home/$USER/validator
 
 
 # update, upgrade, and get required packages
@@ -47,10 +55,7 @@ openssl rand -hex 32 | tee /home/$USER/validator/jwt/secret > /dev/null
 
 
 
-# get the staking deposit cli app and build it.
-cd ~
-git clone $STAKING_DEPOSIT_CLI_REPO
-cd /home/$USER/staking-deposit-cli && pip3 install -r requirements.txt && sudo python3 setup.py install
+
 
 
 # get geth and build it
@@ -78,9 +83,7 @@ read -p "Enter the Geth port number: " GETH_PORT
 read -p "Enter the Lighthouse port number: " LIGHTHOUSE_PORT
 
 
-# generate key/keystore files
-cd /home/$USER/staking-deposit-cli && ./deposit.sh --language=English new-mnemonic --num_validators=1 --mnemonic_language=English --chain=pulsechain --eth1_withdrawal_address=$FEE_RECIPIENT
-mv /home/$USER/staking-deposit-cli/validator_keys /home/$USER/validator
+
 
 # build the geth service so it can auto run on reboot
 sudo tee /etc/systemd/system/geth.service > /dev/null <<EOT
