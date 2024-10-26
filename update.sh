@@ -38,4 +38,4 @@ mv .cargo/bin/lighthouse /home/$USER/validator/lighthouse
 
 sudo systemctl start geth lighthouse-beacon lighthouse-validator
 
-echo "Update Complete.  Rebooting the machine is recommended"
+echo "Update Complete."
