@@ -2,8 +2,8 @@
 #LIGHTHOUSE_REPO="https://gitlab.com/pulsechaincom/lighthouse-pulse.git"
 
 # update, upgrade
-sudo apt-get update -y
-sudo apt-get upgrade -y
+##sudo apt-get update -y
+##sudo apt-get upgrade -y
 
 cd ~
 cd /lighthouse-pulse
